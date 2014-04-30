@@ -11,7 +11,7 @@ Deve-se instalar primeiramente o [grunt-init][].
 Depois de instalado, coloque este template no caminho `~/.grunt-init/`. É recomendado que se use git para clonar esta template no seu diretório:
 
 ```
-git clone https://github.com/CarlosSouza/grunt-init-framework-fed.git ~/.grunt-init/gruntfile
+git clone https://github.com/CarlosSouza/grunt-init-framework-fed.git ~/.grunt-init/framework-fed
 ```
 
 _(Usuários de Windows, vejam [a documentação][grunt-init] para o caminho correto)_
