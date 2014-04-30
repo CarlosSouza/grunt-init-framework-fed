@@ -1,35 +1,27 @@
-# grunt-init-gruntfile
+# Framework FED
 
-<<<<<<< HEAD
-> Create a basic Gruntfile with [grunt-init][].
-=======
 > Cria novo projeto utilizando o [Framework FED][framework-fed], além de um arquivo básico Gruntfile [grunt-init][].
->>>>>>> FETCH_HEAD
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 [framework-fed]: https://github.com/CarlosSouza/framework-fed
 
-## Installation
-If you haven't already done so, install [grunt-init][].
+## Instalação
+Deve-se instalar primeiramente o [grunt-init][].
 
-Once grunt-init is installed, place this template in your `~/.grunt-init/` directory. It's recommended that you use git to clone this template into that directory, as follows:
+Depois de instalado, coloque este template no caminho `~/.grunt-init/`. É recomendado que se use git para clonar esta template no seu diretório:
 
 ```
-<<<<<<< HEAD
-git clone https://github.com/gruntjs/grunt-init-gruntfile.git ~/.grunt-init/gruntfile
-=======
 git clone https://github.com/CarlosSouza/grunt-init-framework-fed.git ~/.grunt-init/framework-fed
->>>>>>> FETCH_HEAD
 ```
 
-_(Windows users, see [the documentation][grunt-init] for the correct destination directory path)_
+_(Usuários de Windows, vejam [a documentação][grunt-init] para o caminho correto)_
 
 ## Usage
 
-At the command-line, cd into an empty directory, run this command and follow the prompts.
+Na linha de comando, entre na pasta vazia (para utilizar no projeto), escreva o comando abaixo.
 
 ```
-grunt-init gruntfile
+grunt-init framework-fed
 ```
 
-_Note that this template will generate files in the current directory, so be sure to change to a new directory first if you don't want to overwrite existing files._
+_Este template sobresceverá os arquivos atuais, por isso se quiser mantê-los, por favor salve-os em outra pasta._
