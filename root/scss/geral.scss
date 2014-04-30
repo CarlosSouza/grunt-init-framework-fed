@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/*
+  Cliente:
+  Projeto:
+
+  --------------
+  PADRÕES DE CODIGO - Frameworks FED
+  --------------
+
+  Nossos projetos são desenvolvidos de acordo com um padrão de escrita.
+  Mais informações sobre ele em: www.webstandards.blog.br e www.frontenddevelopment.com.br
+*/
+
+
+// @import "fontes"; // estilos web fonts
+// @import "compass"; // framework com diversos elementos de design
+@import "elementos"; // biblioteca de classes com estilos gerais
+@import "templates"; // estilos específicos dos templates
+
+
+/*
+  --------------
+  ELEMENTOS e CLASSES
+  --------------
+*/
+
+
+/* ------- ELEMENTOS ------- */
+
+  /* reset */
+  @import "reset";
+
+  html { font: 100% Arial, Helvetica, sans-serif; color: $cor_textos; }
+  body { background-color: $cor_body; @include font-size: 14px; }
+  
+  /* responsive media */
+  img, object, embed { max-width: 100%; height: auto; }
+  object, embed { height: 100%; }
+
+  img { display: inline-block; vertical-align: middle; }
+
+
+/* ------- CLASSES ------- */
+
+  /* paginação */
+  .paginacao {
+    li { display: inline-block;
+      a[rel="prev"], a[rel="next"] {
+        &:hover {
+        }
+      } // a
+    } // li
+  } // .paginacao
+
+  /* popup */
+  .popup { display: none; position: absolute; z-index: 10;
+    a.fechar {  }
+  } // .popup
+  .pelicula { position: absolute; z-index: 9; }
+
+  /* botões */
+  .botao { display: inline-block;
+    &:hover { }
+  }
+
+  /* responsive video-embed */
+  .video-embed { position: relative; height: 0; padding-top: 25px; padding-bottom: 56.25%; /* 16:9 */
+    object, embed { position: absolute; top: 0; left: 0; width: 100%; }
+    iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+  } // .video-embed
+
+
+/*
+  --------------
+  ESTRUTURA
+  --------------
+*/
+
+
+/* ------- TOPO ------- */
+.topo {
+} // .topo
+
+
+/* ------- CONTEÚDO ------- */
+.conteudo {
+
+  /* coluna1 */
+  .coluna1 {
+  } // .coluna1
+
+  /* coluna2 */
+  .coluna2 {
+  } //.coluna2
+
+} // .conteudo
+
+
+/* ------- RODAPÉ ------- */
+.rodape {
+} // .rodape
+
+
+/*
+  --------------
+  TABLET - Dispositivos com telas intermediárias
+  --------------
+*/
+
+@media only screen and (min-width: $bp-med) {
+  
+}
+
+
+/*
+  --------------
+  DESKTOP - Dispositivos com telas maiores
+  --------------
+*/
+
+@media only screen and (min-width: $bp-large) {
+  
+}

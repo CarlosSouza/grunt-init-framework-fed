@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+/*
+  --------------
+  BIBLIOTECA DE CLASSES
+  --------------
+*/
+
+
+/* ------- BREAKPOINTS ------- */
+//$bp-small : 24em;
+$bp-med: 37.5em;
+$bp-large: 62.5em;
+//$bp-xl : 73em;
+
+
+/* ------- PALETA DE CORES ------- */
+$cor_textos: #000; // textos de conteúdo
+$cor_body: #fff; // cor do fundo do site
+
+
+/* ------- CLASSES ------- */
+
+  /* alinhamentos */
+  .direita { float: right; }
+  .esquerda { float: left; }
+  p {
+    &.direita,
+    &.esquerda { float: none; }
+    &.direita { text-align: right; }
+    &.esquerda { text-align: left; }
+  }
+  .centro { text-align: center; }
+
+  // image replacement
+  .rpl { font: 0/0 a !important; color: transparent !important; }
+
+    @mixin rpl($width, $height, $image: null, $display: null, $color: null, $position: null, $repeat: null) {
+      width: $width;
+      height: $height;
+      @if $image != null { background-image: image-url('#{$image}'); }
+      @if $color != null { background-color: $color; }
+      @if $position != null { background-position: $position; }
+      @if $repeat != null { background-repeat: $repeat; }
+        @else { background-repeat: no-repeat; }
+      @if $display != null { display: $display; }
+      @extend .rpl;
+    }
+
+  // fontes em "rem" com fallback para px - ex: @include font-size(14px)
+  @function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+  }
+
+  @mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+  }
+
+  // quebra texto em linhas (palavras grandes)
+  .wrap {
+    text-wrap: wrap;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word;
+  }
+
+  // escondendo elementos sem prejudicar leitor de tela - ex: @extend %visuallyhidden
+  %visuallyhidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+  }
