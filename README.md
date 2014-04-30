@@ -1,8 +1,9 @@
 # Framework FED
 
-> Cria novo projeto utilizando o Framework FED, além de um arquivo básico Gruntfile [grunt-init][].
+> Cria novo projeto utilizando o [Framework FED][framework-fed], além de um arquivo básico Gruntfile [grunt-init][].
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
+[framework-fed]: https://github.com/CarlosSouza/framework-fed
 
 ## Instalação
 Deve-se instalar primeiramente o [grunt-init][].
