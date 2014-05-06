@@ -1,4 +1,4 @@
-﻿/* TEAM */
+/* TEAM */
   Front-End Developer: <seu nome>
   Site: http://
   Twitter: @

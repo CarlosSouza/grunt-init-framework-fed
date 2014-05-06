@@ -32,7 +32,7 @@
   @import "reset";
 
   html { font: 100% Arial, Helvetica, sans-serif; color: $cor_textos; }
-  body { background-color: $cor_body; @include font-size: 14px; }
+  body { background-color: $cor_body; @include font-size(14px); }
   
   /* responsive media */
   img, object, embed { max-width: 100%; height: auto; }
