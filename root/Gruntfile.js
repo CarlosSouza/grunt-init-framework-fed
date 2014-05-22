@@ -66,6 +66,13 @@ module.exports = function(grunt) {
         }]
       }
     },
+    bowerInstall: {
+      target: {
+        src: [
+          '*.html'
+        ]
+      }
+    },
     watch: {
       files: ['*.html', '*.png', '*.jpg'],
       gruntfile: {
@@ -97,6 +104,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-bower-install');
 
   // Default task.
   grunt.registerTask('default', ['compass','jshint','watch','imagemin']);
