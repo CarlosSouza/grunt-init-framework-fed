@@ -35,7 +35,7 @@ $ npm install
 
 ## Extras
 
-_Para utilizar o [Bower][bower[, ferramenta já presente neste template, deve-se instalá-lo para que seja possível utilizá-lo em seu projeto. Só precisa fazer este processo uma vez:
+Para utilizar o [Bower][bower], ferramenta já presente neste template, deve-se instalá-lo para que seja possível utilizá-lo em seu projeto. Só precisa fazer este processo uma vez:
 
 ```
 $ npm install -g bower
