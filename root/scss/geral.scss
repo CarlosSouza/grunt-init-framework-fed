@@ -16,7 +16,6 @@
 // @import "fontes"; // estilos web fonts
 // @import "compass"; // framework com diversos elementos de design
 @import "elementos"; // biblioteca de classes com estilos gerais
-@import "templates"; // estilos específicos dos templates
 
 
 /*
@@ -61,7 +60,7 @@
 
   /* botões */
   .botao { display: inline-block;
-    &:hover { }
+    &:hover {  }
   }
 
   /* responsive video-embed */
@@ -85,15 +84,6 @@
 
 /* ------- CONTEÚDO ------- */
 .conteudo {
-
-  /* coluna1 */
-  .coluna1 {
-  } // .coluna1
-
-  /* coluna2 */
-  .coluna2 {
-  } //.coluna2
-
 } // .conteudo
 
 
@@ -104,21 +94,19 @@
 
 /*
   --------------
-  TABLET - Dispositivos com telas intermediárias
+  PÁGINAS e DEVICES ESPECÍFICOS
   --------------
 */
 
+// templates - estilos de páginas específicas
+@import "templates";
+
+// medium - dispositivos com telas intermediárias
 @media only screen and (min-width: $bp-med) {
-  
+  @import "medium";
 }
 
-
-/*
-  --------------
-  DESKTOP - Dispositivos com telas maiores
-  --------------
-*/
-
+// large - dispositivos com telas grandes
 @media only screen and (min-width: $bp-large) {
-  
+  @import "large"; // estilos específicos para dispositivos com telas grandes
 }
