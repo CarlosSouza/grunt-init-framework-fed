@@ -58,3 +58,5 @@ Por fim, deve-se executar a task para que o Bower seja implementado no projeto e
 ```
 grunt bowerInstall
 ```
+
+Este comando deve ser executado sempre que as dependencias forem alteradas.
