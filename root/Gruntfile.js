@@ -70,7 +70,14 @@ module.exports = function(grunt) {
       target: {
         src: [
           '*.html'
-        ]
+        ],
+        cwd: '',
+        dependencies: true,
+        devDependencies: false,
+        exclude: [],
+        fileTypes: {},
+        ignorePath: '',
+        overrides: {}
       }
     },
     watch: {
