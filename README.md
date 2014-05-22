@@ -16,7 +16,7 @@ git clone https://github.com/CarlosSouza/grunt-init-framework-fed.git ~/.grunt-i
 
 _(Usuários de Windows, vejam [a documentação][grunt-init] para o caminho correto)_
 
-## Usage
+## Uso
 
 Na linha de comando, entre na pasta vazia (para utilizar no projeto), escreva o comando abaixo.
 
@@ -25,3 +25,9 @@ grunt-init framework-fed
 ```
 
 _Este template sobresceverá os arquivos atuais, por isso se quiser mantê-los, por favor salve-os em outra pasta._
+
+Após a criação do projeto com o template, você pode instalar todos os plugins de forma automática com o comando:
+
+```
+npm install
+```
