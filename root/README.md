@@ -22,9 +22,11 @@ scss
   _elementos.scss
   _fontes.scss
   _reset.scss
+  _medium.scss
+  _large.scss
+  _templates.scss
   geral.scss
   impressao.scss
-  templates.scss
 </pre>
 
 ## Features
