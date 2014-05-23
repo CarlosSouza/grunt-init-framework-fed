@@ -33,7 +33,7 @@ Após a criação do projeto com o template, você pode instalar todos os plugin
 $ npm install
 ```
 
-## Extras
+## Bower
 
 Para utilizar o [Bower][bower], ferramenta já presente neste template, deve-se instalá-lo para que seja possível utilizá-lo em seu projeto. Só precisa fazer este processo uma vez:
 
@@ -41,7 +41,7 @@ Para utilizar o [Bower][bower], ferramenta já presente neste template, deve-se 
 $ npm install -g bower
 ```
 
-Após instalar o Bower e criar o projeto com este template, deve-se gerar o arquivo json de configuração *dentro do projeto*:
+Após instalar o Bower e criar o projeto com este template, execute o comando abaixo para gerar o arquivo json de configuração *dentro do projeto*:
 
 ```
 $ bower init
@@ -53,7 +53,7 @@ Depois de criado arquivo json, pode-se instalar os pacotes desejados, por exempl
 $ bower install jquery --save
 ```
 
-Por fim, deve-se executar a task para que o Bower seja implementado no projeto efetivamente:
+Por fim, digite o comando abaixo para executar a task que implementa o Bower no projeto efetivamente:
 
 ```
 $ grunt bowerInstall
