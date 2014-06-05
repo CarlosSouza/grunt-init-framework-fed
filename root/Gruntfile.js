@@ -94,7 +94,7 @@ module.exports = function(grunt) {
         tasks: ['compass'],
       },
       scripts: {
-        files: ['js/*', '!libs/*.js'],
+        files: ['js/*'],
         tasks: ['uglify', 'jshint'],
         options: {
           spawn: false,
