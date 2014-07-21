@@ -80,14 +80,32 @@ module.exports = function(grunt) {
         overrides: {}
       }
     },
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src: [
+            "css/*.css",
+            "*.html"
+          ]
+        },
+        options: {
+          ghostMode: {
+            clicks: true,
+            location: true,
+            forms: true,
+            scroll: true
+          },
+          watchTask: true,
+          proxy: "localhost:8888",
+          browser: "google chrome"
+        }
+      }
+    },
     watch: {
       files: ['*.html', '*.png', '*.jpg', '*.js'],
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
-      },
-      options: {
-        livereload: true,
       },
       sass: {
         files: ['scss/*'],
@@ -112,8 +130,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-bower-install');
+  grunt.loadNpmTasks('grunt-browser-sync');
 
   // Default task.
-  grunt.registerTask('default', ['compass','jshint','watch','imagemin']);
+  grunt.registerTask('default', ['compass','jshint','browserSync','watch','imagemin']);
 
 };

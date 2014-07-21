@@ -79,7 +79,8 @@ exports.template = function(grunt, init, done) {
         'grunt-contrib-watch': '~0.6.1',
         'grunt-contrib-compass': '~0.7.1',
         'grunt-contrib-imagemin': '~0.7.0',
-        'grunt-bower-install': '~1.6.0'
+        'grunt-bower-install': '~1.6.0',
+        "grunt-browser-sync": "~1.3.0"
       };
 
       if (props.dom) {
