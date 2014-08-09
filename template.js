@@ -80,7 +80,7 @@ exports.template = function(grunt, init, done) {
         'grunt-contrib-compass': '~0.7.1',
         'grunt-contrib-imagemin': '~0.7.0',
         'grunt-bower-install': '~1.6.0',
-        "grunt-browser-sync": "~1.3.0"
+        "grunt-browser-sync": "~1.3.2"
       };
 
       if (props.dom) {
