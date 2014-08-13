@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 /*
-  Cliente:
-  Projeto:
+  Cliente: 
+  Projeto: 
 
   --------------
   PADRÕES DE CODIGO - Frameworks FED
@@ -14,7 +14,7 @@
 
 
 // @import "fontes"; // estilos web fonts
-// @import "compass"; // framework com diversos elementos de design
+@import "compass/css3/transition"; // compass - transition
 @import "elementos"; // biblioteca de classes com estilos gerais
 
 
@@ -51,12 +51,21 @@
       } // a
     } // li
   } // .paginacao
+  
+  /* magnific popup */
+  .js .mfp-bg { background: #fff; opacity: 0; @include transition(all .2s);
+    &.mfp-ready { opacity: .7; }
+  }
 
-  /* popup */
-  .popup { display: none; position: absolute; z-index: 10;
-    a.fechar {  }
-  } // .popup
-  .pelicula { position: absolute; z-index: 9; }
+  /* mfp-container */
+  .mfp-container { opacity: 0; @include transition(all .2s);
+    /* popup */
+    .popup { position: relative; margin: 0 auto;
+      .mfp-close {  }
+    } // .popup
+
+    .mfp-wrap.mfp-ready & { opacity: 1; }
+  } // .mfp-container
 
   /* botões */
   .botao { display: inline-block;
