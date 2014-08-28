@@ -20,11 +20,7 @@ $cor_body: #fff; // cor do fundo do site
 /* ------- CLASSES ------- */
 
   /* alinhamentos */
-  .direita { float: right; }
-  .esquerda { float: left; }
   p {
-    &.direita,
-    &.esquerda { float: none; }
     &.direita { text-align: right; }
     &.esquerda { text-align: left; }
   }

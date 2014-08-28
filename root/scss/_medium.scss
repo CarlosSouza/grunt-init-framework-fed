@@ -13,11 +13,18 @@
 
 
 /* ------- ELEMENTOS ------- */
-
+body:after { content: 'medium'; display: none; }
 
 
 /* ------- CLASSES ------- */
-
+  
+  /* alinhamentos */
+  .direita { float: right; }
+  .esquerda { float: left; }
+  p {
+    &.direita,
+    &.esquerda { float: none; }
+  }
 
 
 /*
