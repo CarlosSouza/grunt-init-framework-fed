@@ -74,24 +74,24 @@ exports.template = function(grunt, init, done) {
     // If is package_json true, generate package.json
     if (props.package_json) {
       var devDependencies = {
-        'grunt': '~0.4.4',
+        'grunt': '~0.4.5',
         'grunt-contrib-jshint': '~0.10.0',
         'grunt-contrib-watch': '~0.6.1',
-        'grunt-contrib-compass': '~0.7.1',
-        'grunt-contrib-imagemin': '~0.7.0',
+        'grunt-contrib-compass': '~1.0.1',
+        'grunt-contrib-imagemin': '~0.8.1',
         'grunt-bower-install': '~1.6.0',
-        "grunt-browser-sync": "~1.3.2"
+        "grunt-browser-sync": "~1.5.2"
       };
 
       if (props.dom) {
-        devDependencies['grunt-contrib-qunit'] = '~0.4.0';
+        devDependencies['grunt-contrib-qunit'] = '~0.5.2';
       } else {
-        devDependencies['grunt-contrib-nodeunit'] = '~0.3.3';
+        devDependencies['grunt-contrib-nodeunit'] = '~0.4.1';
       }
 
       if (props.min_concat) {
-        devDependencies['grunt-contrib-concat'] = '~0.4.0';
-        devDependencies['grunt-contrib-uglify'] = '~0.4.0';
+        devDependencies['grunt-contrib-concat'] = '~0.5.0';
+        devDependencies['grunt-contrib-uglify'] = '~0.6.0';
       }
 
       // Generate package.json file, used by npm and grunt.
