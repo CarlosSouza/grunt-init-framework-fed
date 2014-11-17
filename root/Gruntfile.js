@@ -16,11 +16,11 @@ module.exports = function(grunt) {
     // Task configuration.
     uglify: {
       dist: {
-        files: [
-          {src: 'js/main.js', dest: 'js/main.min.js'},
-          {src: 'js/plugins.js', dest: 'js/plugins.min.js'},
-          {src: 'js/_bower.js', dest: 'js/_bower.min.js'}
-        ],
+        files: grunt.file.expandMapping(['js/*.js'], '', {
+          rename: function(destBase, destPath) {
+            return destBase+destPath.replace('.js', '.min.js');
+          }
+        }),
         options: {
           sourceMap: true,
           banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
@@ -137,6 +137,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-wiredep');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-bower-concat');
 
   // Default task.
   grunt.registerTask('default', ['bower_concat','wiredep','browserSync','watch','imagemin']);
