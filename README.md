@@ -52,11 +52,3 @@ Depois de criado arquivo json, pode-se instalar os pacotes desejados, por exempl
 ```
 $ bower install jquery --save
 ```
-
-Por fim, digite o comando abaixo para executar a task que implementa o Bower no projeto efetivamente:
-
-```
-$ grunt bowerInstall
-```
-
-_Este comando deve ser executado sempre que as dependencias forem alteradas._

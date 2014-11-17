@@ -18,7 +18,8 @@ module.exports = function(grunt) {
       dist: {
         files: [
           {src: 'js/main.js', dest: 'js/main.min.js'},
-          {src: 'js/plugins.js', dest: 'js/plugins.min.js'}
+          {src: 'js/plugins.js', dest: 'js/plugins.min.js'},
+          {src: 'js/_bower.js', dest: 'js/_bower.min.js'}
         ],
         options: {
           sourceMap: true,
@@ -79,9 +80,7 @@ module.exports = function(grunt) {
         cssDest: 'css/_bower.css',
         exclude: [
           'jquery',
-          'modernizr',
-          'css3-mediaqueries-js',
-          'vanilla-masker'
+          'modernizr'
         ],
         bowerOptions: {
           relative: false
@@ -140,6 +139,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
 
   // Default task.
-  grunt.registerTask('default', ['compass','jshint','bower_concat','wiredep','browserSync','watch','imagemin']);
+  grunt.registerTask('default', ['bower_concat','wiredep','browserSync','watch','imagemin']);
 
 };
