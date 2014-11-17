@@ -66,18 +66,26 @@ module.exports = function(grunt) {
         }]
       }
     },
-    bowerInstall: {
-      target: {
+    wiredep: {
+      task: {
         src: [
           '*.html'
         ],
-        cwd: '',
-        dependencies: true,
-        devDependencies: false,
-        exclude: [],
-        fileTypes: {},
-        ignorePath: '',
-        overrides: {}
+      }
+    },
+    bower_concat: {
+      all: {
+        dest: 'js/_bower.js',
+        cssDest: 'css/_bower.css',
+        exclude: [
+          'jquery',
+          'modernizr',
+          'css3-mediaqueries-js',
+          'vanilla-masker'
+        ],
+        bowerOptions: {
+          relative: false
+        }
       }
     },
     browserSync: {
@@ -132,6 +140,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
 
   // Default task.
-  grunt.registerTask('default', ['compass','jshint','browserSync','watch','imagemin']);
+  grunt.registerTask('default', ['compass','jshint','bower_concat','wiredep','browserSync','watch','imagemin']);
 
 };
