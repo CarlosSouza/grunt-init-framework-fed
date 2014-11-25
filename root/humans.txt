@@ -1,14 +1,12 @@
-﻿/* TEAM */
+/* TEAM */
   Front-End Developer: <seu nome>
   Site: http://
   Twitter: @
-  Google+ Profile: <a href="[profile_url]?rel=author">Google</a>
   Location: Curitiba-PR
 
   <seu cargo>: <seu nome>
   Site: http://
   Twitter: @
-  Google+ Profile: <a href="[profile_url]?rel=author">Google</a>
   Location: Curitiba-PR
 
 
@@ -19,4 +17,4 @@
 /* SITE */
   Standards: HTML5, CSS3
   Components: Framework FED, Grunt, Bower, BrowserSync, SASS, Compass, Modernizr, jQuery
-  Software: Sublime Text, Photoshop, Versions, SourceTreem VMWare Fusion
+  Software: Sublime Text, Photoshop, Versions, SourceTree, VMWare Fusion
