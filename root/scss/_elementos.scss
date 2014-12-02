@@ -38,6 +38,7 @@ $cor_body: #fff; // cor do fundo do site
       @if $repeat != null { background-repeat: $repeat; }
         @else { background-repeat: no-repeat; }
       @if $display != null { display: $display; }
+      @if $size != null { background-size: $size; }
       @extend .rpl;
     }
 
