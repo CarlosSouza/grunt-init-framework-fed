@@ -27,6 +27,15 @@ module.exports = function(grunt) {
           '<%= grunt.template.today("yyyy-mm-dd") %> */'
         },
       },
+      bower: {
+        options: {
+          mangle: true,
+          compress: true
+        },
+        files: {
+          'js/_bower.min.js': 'js/_bower.js'
+        }
+      },
     },
     jshint: {
       options: {
@@ -120,7 +129,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: ['js/*'],
-        tasks: ['uglify', 'jshint'],
+        tasks: ['uglify', 'uglify:bower', 'jshint'],
         options: {
           spawn: false,
         },
