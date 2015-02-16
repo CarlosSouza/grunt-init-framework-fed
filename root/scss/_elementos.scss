@@ -29,7 +29,7 @@ $cor_body: #fff; // cor do fundo do site
   // image replacement
   .rpl { font: 0/0 a !important; color: transparent !important; }
 
-    @mixin rpl($width, $height, $image: null, $display: null, $color: null, $position: null, $repeat: null) {
+    @mixin rpl($width, $height, $image: null, $display: null, $color: null, $position: null, $repeat: null, $size: null) {
       width: $width;
       height: $height;
       @if $image != null { background-image: image-url('#{$image}'); }
