@@ -117,7 +117,8 @@ module.exports = function(grunt) {
         bsFiles: {
           src: [
             "css/*.css",
-            "*.html"
+            "*.html",
+            "js/*.js"
           ]
         },
         options: {
@@ -138,9 +139,9 @@ module.exports = function(grunt) {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
       },
-      sass: {
-        files: ['scss/*'],
-        tasks: ['compass'],
+      css: {
+        files: 'scss/*.scss',
+        tasks: ['sass', 'autoprefixer']
       },
       scripts: {
         files: ['js/*'],
@@ -158,14 +159,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-wiredep');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-bower-concat');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Default task.
-  grunt.registerTask('default', ['bower_concat','wiredep','autoprefixer','browserSync','watch','imagemin']);
+  grunt.registerTask('default', ['bower_concat','wiredep','browserSync','watch','imagemin']);
 
 };
