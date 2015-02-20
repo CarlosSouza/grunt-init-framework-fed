@@ -5,7 +5,6 @@
 *(?) - opcional*
 
 <pre>
-config.rb
 /css
   fonts (?)
 estrutura.txt
@@ -33,7 +32,7 @@ scss
 
   * Simples. Ao contrário da grande variedade de *frameworks* presentes no mercado, o **Framework FED** preza pela simplicidade e flexibilidade uso, sem engessar a forma como os layouts são montados;
   * Todo construído com base no pré-processador SASS, separando o código de desenvolvimento daquele gerado para produção;
-  * Em conjunto com SASS, a biblioteca Compass adiciona diversos facilitadores para criação de elementos visuais de forma intuitiva;
+  * Em conjunto com SASS, a ferramenta Autoprefixer para automatizar o uso dos prefixos em propriedades do CSS3, de acordo com o banco de dados do [Can I Use](http://caniuse.com/);
   * *Mobile First + Responsive Web Design*: framework desenvolvido com lógica para melhor performance e escabilidade de acordo com as diferentes resoluções de tela. As regras gerais são usadas por todas as telas e, a medida que for necessário, novas regras são adicionadas para incrementar o layout. Os *breakpoints* são definidos através de variáveis, facilitando futuros ajustes durante o andamento do projeto;
   * *Schema ready*: tag *body* utilizando padrão *Schema* para classificação das páginas. Verificar documentação completa em [schema.org](http://schema.org/).
 
@@ -44,6 +43,7 @@ scss
   * [GreenStock JS](https://github.com/greensock/GreenSock-JS): biblioteca de animação em JS, com performance superior a jQuery e ao próprio CSS3;
   * [Magnific Popup](https://github.com/dimsemenov/Magnific-Popup): plugin para criação de lightboxes em geral;
   * [Packery](https://github.com/metafizzy/packery): gera layouts flexíveis baseados em conteúdo modular (ex: Pinterest).
+  * [ScrollMagic](http://janpaepke.github.io/ScrollMagic): para layouts com efeitos no scroll da página.
 
 ### Precisa de suporte para IE8 e inferiores?
 
@@ -58,6 +58,5 @@ Recursos para que este framework se adeque a navegadores rudimentares:
   <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
   <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-br"> <!--<![endif]-->
 ```
-  * [css3-mediaqueries-js](https://code.google.com/p/css3-mediaqueries-js/): Possibilita o uso de Media Queries em IE5+. Dicas de uso [neste artigo](http://coding.smashingmagazine.com/2011/08/10/techniques-for-gracefully-degrading-media-queries/);
-  * [jQuery Migrate](https://github.com/jquery/jquery-migrate/): Uso da versão atual do jQuery;
+  * [css3-mediaqueries-js](https://github.com/livingston/css3-mediaqueries-js): Possibilita o uso de Media Queries em IE5+. Dicas de uso [neste artigo](http://coding.smashingmagazine.com/2011/08/10/techniques-for-gracefully-degrading-media-queries/);
   * [box-sizing polyfill](https://github.com/Schepp/box-sizing-polyfill): Permite uso do box-sizing no Internet Explorer 6 e 7.

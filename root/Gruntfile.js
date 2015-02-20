@@ -59,12 +59,28 @@ module.exports = function(grunt) {
         src: 'Gruntfile.js'
       }
     },
-    compass: {
+    sass: {
       dist: {
-        options: {
-          config: 'config.rb'
-        }
+        files: [{
+          expand: true,
+          cwd: 'scss',
+          src: ['*.scss'],
+          dest: '../css',
+          ext: '.css',
+          style: 'compressed'
+        }]
       }
+    },
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'ie 8', 'ie 9']
+      },
+      multiple_files: {
+        expand: true,
+        flatten: true,
+        src: 'css/*.css',
+        dest: 'css/'
+      },
     },
     imagemin: {
       dynamic: {
@@ -142,6 +158,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-wiredep');
@@ -149,6 +167,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bower-concat');
 
   // Default task.
-  grunt.registerTask('default', ['bower_concat','wiredep','browserSync','watch','imagemin']);
+  grunt.registerTask('default', ['bower_concat','wiredep','autoprefixer','browserSync','watch','imagemin']);
 
 };
