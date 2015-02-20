@@ -128,8 +128,7 @@ module.exports = function(grunt) {
             scroll: true
           },
           watchTask: true,
-          proxy: "localhost:8888",
-          browser: "google chrome"
+          proxy: "localhost:8888"
         }
       }
     },
