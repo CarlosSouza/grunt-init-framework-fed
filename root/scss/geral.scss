@@ -14,7 +14,6 @@
 
 
 // @import "fontes"; // estilos web fonts
-@import "compass/css3/transition"; // compass - transition
 @import "elementos"; // biblioteca de classes com estilos gerais
 
 
@@ -53,12 +52,12 @@
   } // .paginacao
   
   /* magnific popup */
-  .js .mfp-bg { background: #fff; opacity: 0; @include transition(all .2s);
+  .js .mfp-bg { background: #fff; opacity: 0; transition: all .2s;
     &.mfp-ready { opacity: .7; }
   }
 
   /* mfp-container */
-  .mfp-container { opacity: 0; @include transition(all .2s);
+  .mfp-container { opacity: 0; transition: all .2s;
     /* popup */
     .popup { position: relative; margin: 0 auto;
       .mfp-close {  }
