@@ -8,7 +8,7 @@
 
 ## Instalação
 
-Para o Grunt funcionar, deve-se ter o [Node.Js][http://nodejs.org/] instalado, o qual já possibilida o uso do NPM em sua máquina. Somente após isso será possível instalar o [grunt-init][].
+Para o Grunt funcionar, deve-se ter o [Node.Js](http://nodejs.org/) instalado, o qual já possibilida o uso do NPM em sua máquina. Somente após isso será possível instalar o [grunt-init][].
 
 Depois de instalado, coloque este template no caminho `~/.grunt-init/`. É recomendado que se use git para clonar esta template no seu diretório:
 
@@ -36,7 +36,7 @@ $ npm install
 
 ## Ferramentas adicionais
 
-Este plugin utiliza [SASS][http://sass-lang.com/] como pré-processador de CSS e [BrowserSync][http://www.browsersync.io/] para refresh automático do navegador. Ambos devem ser instalados antes de iniciar seu primeiro projeto com este framework. Só precisa fazer esta instalação uma vez.
+Este plugin utiliza [SASS][sass] como pré-processador de CSS e [BrowserSync][browsersync] para refresh automático do navegador. Ambos devem ser instalados antes de iniciar seu primeiro projeto com este framework. Só precisa fazer esta instalação uma vez.
 
 ```
 $ gem install sass
