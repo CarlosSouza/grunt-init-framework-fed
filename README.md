@@ -23,7 +23,7 @@ _(Usuários de Windows, vejam [a documentação][grunt-init] para o caminho corr
 
 ## Uso
 
-Na linha de comando, entre na pasta vazia (para utilizar no projeto) e escreva o comando abaixo.
+Na linha de comando, entre na pasta do projeto (que deve estar vazia) e escreva o comando abaixo:
 
 ```
 $ grunt-init framework-fed
@@ -66,5 +66,5 @@ $ bower init
 Depois de criado arquivo json, pode-se instalar os pacotes desejados, por exemplo:
 
 ```
-$ bower install jquery --save
+$ bower install jquery --save-dev
 ```
