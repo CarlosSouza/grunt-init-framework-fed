@@ -7,7 +7,8 @@
 [bower]: http://bower.io/
 
 ## Instalação
-Deve-se instalar primeiramente o [grunt-init][].
+
+Para o Grunt funcionar, deve-se ter o [Node.Js][http://nodejs.org/] instalado, o qual já possibilida o uso do NPM em sua máquina. Somente após isso será possível instalar o [grunt-init][].
 
 Depois de instalado, coloque este template no caminho `~/.grunt-init/`. É recomendado que se use git para clonar esta template no seu diretório:
 
@@ -33,9 +34,24 @@ Após a criação do projeto com o template, você pode instalar todos os plugin
 $ npm install
 ```
 
+## Ferramentas adicionais
+
+Este plugin utiliza [SASS][http://sass-lang.com/] como pré-processador de CSS e [BrowserSync][http://www.browsersync.io/] para refresh automático do navegador. Ambos devem ser instalados antes de iniciar seu primeiro projeto com este framework. Só precisa fazer esta instalação uma vez.
+
+```
+$ gem install sass
+```
+
+```
+$ npm install -g browser-sync
+```
+
+
 ## Bower
 
-Para utilizar o [Bower][bower], ferramenta já presente neste template, deve-se instalá-lo para que seja possível utilizá-lo em seu projeto. Só precisa fazer este processo uma vez:
+Além do SASS e BrowserSync, utilizamos o [Bower][bower] para gerenciamento de plugins JS. Sendo assim, deve-se instalá-lo para que seja possível sua utilização nos projetos.
+
+Assim como no caso do SASS e BrowserSync, só precisa fazer este processo uma vez:
 
 ```
 $ npm install -g bower
