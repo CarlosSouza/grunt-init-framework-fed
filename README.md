@@ -2,13 +2,16 @@
 
 > Cria novo projeto utilizando o [Framework FED][framework-fed], além de um arquivo básico Gruntfile [grunt-init][].
 
+[nodejs]: http://nodejs.org/
 [grunt-init]: http://gruntjs.com/project-scaffolding
 [framework-fed]: https://github.com/CarlosSouza/framework-fed
+[sass]: http://sass-lang.com/install/
+[browsersync]: http://browsersync.io/
 [bower]: http://bower.io/
 
 ## Instalação
 
-Para o Grunt funcionar, deve-se ter o [Node.Js](http://nodejs.org/) instalado, o qual já possibilida o uso do NPM em sua máquina. Somente após isso será possível instalar o [grunt-init][].
+Para o Grunt funcionar, deve-se ter o [Node.Js][nodejs] instalado, o qual já possibilida o uso do NPM em sua máquina. Somente após isso será possível instalar o [grunt-init][].
 
 Depois de instalado, coloque este template no caminho `~/.grunt-init/`. É recomendado que se use git para clonar esta template no seu diretório:
 
