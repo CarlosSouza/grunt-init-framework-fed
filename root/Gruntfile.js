@@ -6,13 +6,8 @@ module.exports = function(grunt) {
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     meta: {
-      version: '0.1.0'
+      version: '1.0.0'
     },
-    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-      '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-      '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-      '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
     uglify: {
       dist: {
@@ -51,6 +46,7 @@ module.exports = function(grunt) {
         boss: true,
         eqnull: true,
         browser: true,
+        ignores: ['js/_bower.js', 'js/_bower.min.js', 'js/plugins.js', 'js/plugins.min.js'],
         globals: {
           jQuery: true
         }
@@ -67,8 +63,10 @@ module.exports = function(grunt) {
           src: ['*.scss'],
           dest: 'css',
           ext: '.css',
+        }],
+        options: {
           style: 'compressed'
-        }]
+        }
       }
     },
     autoprefixer: {
@@ -90,13 +88,6 @@ module.exports = function(grunt) {
           src: ['**/*.{png,jpg,gif}'],
           dest: 'imagens/'
         }]
-      }
-    },
-    wiredep: {
-      task: {
-        src: [
-          '*.html'
-        ],
       }
     },
     bower_concat: {
@@ -134,7 +125,7 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['*.html', '*.png', '*.jpg', '*.js'],
+      files: ['*.html', 'imagens/*.png', 'imagens/*.jpg', 'js/*.js', '../**/*.php'],
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
@@ -160,12 +151,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-wiredep');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-bower-concat');
   grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Default task.
-  grunt.registerTask('default', ['bower_concat','wiredep','browserSync','watch','imagemin']);
+  grunt.registerTask('default', ['bower_concat','browserSync','imagemin','watch']);
 
 };
