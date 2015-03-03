@@ -41,25 +41,23 @@ exports.template = function(grunt, init, done) {
 
 
     // If is package_json true, generate package.json
-    if (props.package_json) {
-      var devDependencies = {
-        'grunt': '~0.4.5',
-        'grunt-contrib-jshint': '~0.10.0',
-        'grunt-contrib-watch': '~0.6.1',
-        'grunt-contrib-sass': '~0.9.2',
-        'grunt-autoprefixer': '~2.2.0',
-        'grunt-contrib-imagemin': '~0.8.1',
-        'grunt-browser-sync': '~1.5.2',
-        'grunt-bower-concat': '~0.4.0',
-        'grunt-contrib-uglify': '~0.6.0'
-      };
+    var devDependencies = {
+      'grunt': '~0.4.5',
+      'grunt-contrib-jshint': '~0.10.0',
+      'grunt-contrib-watch': '~0.6.1',
+      'grunt-contrib-sass': '~0.9.2',
+      'grunt-autoprefixer': '~2.2.0',
+      'grunt-contrib-imagemin': '~0.8.1',
+      'grunt-browser-sync': '~1.5.2',
+      'grunt-bower-concat': '~0.4.0',
+      'grunt-contrib-uglify': '~0.6.0'
+    };
 
-      // Generate package.json file, used by npm and grunt.
-      init.writePackageJSON('package.json', {
-        node_version: '>= 0.10.0',
-        devDependencies: devDependencies
-      });
-    }
+    // Generate package.json file, used by npm and grunt.
+    init.writePackageJSON('package.json', {
+      node_version: '>= 0.10.0',
+      devDependencies: devDependencies
+    });
 
     // All done!
     done();
