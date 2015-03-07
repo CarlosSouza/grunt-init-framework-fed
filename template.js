@@ -50,7 +50,8 @@ exports.template = function(grunt, init, done) {
       'grunt-contrib-imagemin': '~0.8.1',
       'grunt-browser-sync': '~1.5.2',
       'grunt-bower-concat': '~0.4.0',
-      'grunt-contrib-uglify': '~0.6.0'
+      'grunt-contrib-uglify': '~0.6.0',
+      'grunt-svgstore': '~0.5.0'
     };
 
     // Generate package.json file, used by npm and grunt.

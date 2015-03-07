@@ -90,6 +90,21 @@ module.exports = function(grunt) {
         }]
       }
     },
+    svgstore: {
+      options: {
+        prefix : 'icone-',
+        cleanup: true,
+        svg: {
+          viewBox : '0 0 100 100',
+          xmlns: 'http://www.w3.org/2000/svg'
+        }
+      },
+      default : {
+        files: {
+          'imagens/icones.svg': ['imagens/svg/*.svg'],
+        },
+      },
+    },
     bower_concat: {
       all: {
         dest: 'js/_bower.js',
@@ -101,6 +116,28 @@ module.exports = function(grunt) {
         bowerOptions: {
           relative: false
         }
+      }
+    },
+    watch: {
+      files: ['*.html', 'imagens/*.png', 'imagens/*.jpg', 'js/*.js', '../**/*.php'],
+      gruntfile: {
+        files: '<%= jshint.gruntfile.src %>',
+        tasks: ['jshint:gruntfile']
+      },
+      css: {
+        files: 'scss/*.scss',
+        tasks: ['sass', 'autoprefixer']
+      },
+      svgstore: {
+        files: 'imagens/svg/*.svg',
+        tasks: ['svgstore']
+      },
+      scripts: {
+        files: ['js/*'],
+        tasks: ['uglify', 'uglify:bower', 'jshint'],
+        options: {
+          spawn: false,
+        },
       }
     },
     browserSync: {
@@ -123,24 +160,6 @@ module.exports = function(grunt) {
           proxy: "localhost:8888"
         }
       }
-    },
-    watch: {
-      files: ['*.html', 'imagens/*.png', 'imagens/*.jpg', 'js/*.js', '../**/*.php'],
-      gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
-      },
-      css: {
-        files: 'scss/*.scss',
-        tasks: ['sass', 'autoprefixer']
-      },
-      scripts: {
-        files: ['js/*'],
-        tasks: ['uglify', 'uglify:bower', 'jshint'],
-        options: {
-          spawn: false,
-        },
-      }
     }
   });
 
@@ -153,6 +172,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-bower-concat');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-svgstore');
 
   // Default task.
   grunt.registerTask('default', ['bower_concat','browserSync','imagemin','watch']);
