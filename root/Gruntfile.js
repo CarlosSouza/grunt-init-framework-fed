@@ -119,7 +119,7 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['*.html', 'imagens/*.png', 'imagens/*.jpg', 'js/*.js', '../**/*.php'],
+      files: ['*.html', 'imagens/*.png', 'imagens/*.jpg', 'js/*.js'],
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
