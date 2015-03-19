@@ -2,6 +2,7 @@
 
 > Cria novo projeto utilizando o [Framework FED][framework-fed], além de um arquivo básico Gruntfile [grunt-init][].
 
+[commandlinetools]: http://railsapps.github.io/xcode-command-line-tools.html
 [nodejs]: http://nodejs.org/
 [grunt-cli]: http://gruntjs.com/getting-started
 [grunt-init]: http://gruntjs.com/project-scaffolding
@@ -10,11 +11,39 @@
 [browsersync]: http://browsersync.io/
 [bower]: http://bower.io/
 
-## Instalação
+## Requisitos
 
-Para o Grunt funcionar, deve-se ter o [Node.Js][nodejs] instalado, o qual já possibilita o uso do NPM em sua máquina. Somente após isso será possível instalar o [grunt-cli][] e [grunt-init][].
+Os recursos obrigatórios para que o Framework FED funcione no grunt são os seguintes:
 
-Depois de instalado, coloque este template no caminho `~/.grunt-init/`. É recomendado que se use git para clonar esta template no seu diretório:
+* Para Mac: [Command Line Tools][commandlinetools]
+* [Node.Js][nodejs]
+* [grunt-cli][]
+* [grunt-init][]
+* [SASS][sass]
+* [BrowserSync][browsersync]
+* [Bower][bower]
+
+## Processo Único
+
+Veja abaixo os passos a serem executados apenas na primeira vez que for utilizar o grunt, para que tenha as ferramentas necessárias instaladas em sua máquina (levando em conta que esteja utilizando Mac):
+
+### Instalação
+
+Após a instalação do [Node.Js][nodejs] (via download de pacote no próprio site), você pode executar os seguintes comandos para instalar as outras ferramentas listadas acima:
+
+```
+$ npm install -g grunt-cli
+$ npm install -g grunt-init
+$ gem install sass
+$ npm install -g browser-sync
+$ npm install -g bower
+```
+
+_Pode ser que você tenha de usar "sudo" (sem as aspas), no início de cada linha, para não ter problemas com permissão nas instalações acima_
+
+### Cópia do template base em sua máguina
+
+Depois da instalação dos recursos básicos, coloque o grunt-framework-fed na pasta `~/.grunt-init/`. Podemos fazer isso através do git:
 
 ```
 $ git clone https://github.com/CarlosSouza/grunt-init-framework-fed.git ~/.grunt-init/framework-fed
@@ -22,7 +51,7 @@ $ git clone https://github.com/CarlosSouza/grunt-init-framework-fed.git ~/.grunt
 
 _(Usuários de Windows, vejam [a documentação][grunt-init] para o caminho correto)_
 
-## Uso
+## Processos a serem executados a cada novo projeto
 
 Na linha de comando, entre na pasta do projeto (que deve estar vazia) e escreva o comando abaixo:
 
@@ -38,27 +67,9 @@ Após a criação do projeto com o template, você pode instalar todos os plugin
 $ npm install
 ```
 
-## Ferramentas adicionais
+### Bower
 
-Este plugin utiliza [SASS][sass] como pré-processador de CSS e [BrowserSync][browsersync] para refresh automático do navegador. Ambos devem ser instalados antes de iniciar seu primeiro projeto com este framework. Só precisa fazer esta instalação uma vez:
-
-```
-$ gem install sass
-$ npm install -g browser-sync
-```
-
-
-## Bower
-
-Além do SASS e BrowserSync, utilizamos o [Bower][bower] para gerenciamento de plugins JS. Sendo assim, deve-se instalá-lo para que seja possível sua utilização nos projetos.
-
-Assim como no caso do SASS e BrowserSync, só precisa fazer este processo uma vez:
-
-```
-$ npm install -g bower
-```
-
-Após instalar o Bower e criar o projeto com este template, execute o comando abaixo para gerar o arquivo json de configuração *dentro do projeto*:
+Após criar o projeto com este template, execute o comando abaixo para gerar o arquivo json de configuração *dentro do projeto*:
 
 ```
 $ bower init
@@ -68,4 +79,16 @@ Depois de criado arquivo json, pode-se instalar os pacotes desejados, por exempl
 
 ```
 $ bower install jquery --save-dev
+```
+
+Caso não saiba o nome do plugin desejado, é possível realizar uma busca:
+
+```
+$ bower search jquery
+```
+
+#### Importante: este framework assume que o localhost está utilizando a porta 8888 (MAMP). Caso esteja diferente disso, é só procurar a linha abaixo dentro do arquivo Gruntfile.js e fazer a modificação desejada:
+
+```
+proxy: "localhost:8888"
 ```
