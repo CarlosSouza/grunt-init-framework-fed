@@ -53,7 +53,7 @@ _(Usuários de Windows, vejam [a documentação][grunt-init] para o caminho corr
 
 ## Workflow
 
-Agora vamos detalhar os passos a serem feitos *no início de cada novo projeto*. Na linha de comando, entre na pasta do projeto (que deve estar vazia) e escreva o comando abaixo:
+Agora vamos detalhar os passos a serem feitos **no início de cada novo projeto**. Na linha de comando, entre na pasta do projeto (que deve estar vazia) e escreva o comando abaixo:
 
 ```
 $ grunt-init framework-fed
@@ -69,7 +69,7 @@ $ npm install
 
 ### Bower
 
-Após criar o projeto com este template, execute o comando abaixo para gerar o arquivo json de configuração *dentro do projeto*:
+Após criar o projeto com este template, execute o comando abaixo para gerar o arquivo json de configuração **dentro do projeto**:
 
 ```
 $ bower init
@@ -87,9 +87,9 @@ Caso não saiba o nome do plugin desejado, é possível realizar uma busca:
 $ bower search jquery
 ```
 
-Após essa etapa de preparação, é só executar o *grunt* normalmente.
+Após essa etapa de preparação, é só executar o **grunt** normalmente.
 
-*Importante:* este framework assume que o localhost está utilizando a porta 8888 (MAMP). Caso esteja diferente disso, é só procurar a linha abaixo dentro do arquivo Gruntfile.js e fazer a modificação desejada:
+**Importante:** este framework assume que o localhost está utilizando a porta 8888 (MAMP). Caso esteja diferente disso, é só procurar a linha abaixo dentro do arquivo Gruntfile.js e fazer a modificação desejada:
 
 ```
 proxy: "localhost:8888"
@@ -104,4 +104,4 @@ $ npm install
 $ bower init
 ```
 
-Depois disso é só executar o *grunt* normalmente.
+Depois disso é só executar o **grunt** normalmente.
