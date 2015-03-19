@@ -97,7 +97,7 @@ proxy: "localhost:8888"
 
 ## E se eu precisar trabalhar em um projeto já em andamento?
 
-Neste caso, entre na pasta do projeto (com todos os arquivos) e digite os seguintes comandos:
+Neste caso, entre na pasta do projeto em andamento e digite o seguinte:
 
 ```
 $ npm install
