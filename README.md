@@ -39,7 +39,7 @@ $ npm install -g browser-sync
 $ npm install -g bower
 ```
 
-_Pode ser que seja necessário inserir "sudo" (sem as aspas) no início de cada linha, para não ter problemas com permissão nas instalações_
+_Pode ser que seja necessário inserir "sudo" (sem as aspas) no início de cada linha, para não ter problemas com permissão nas instalações._
 
 ### Cópia do template base em sua máguina
 
