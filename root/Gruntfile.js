@@ -18,8 +18,7 @@ module.exports = function(grunt) {
         }),
         options: {
           sourceMap: true,
-          banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-          '<%= grunt.template.today("yyyy-mm-dd") %> */'
+          banner: '/*! <%= grunt.template.today("yyyy-mm-dd") %> */'
         },
       },
       bower: {
@@ -145,8 +144,7 @@ module.exports = function(grunt) {
         bsFiles: {
           src: [
             "css/*.css",
-            "*.html",
-            "js/*.js"
+            "*.html"
           ]
         },
         options: {
