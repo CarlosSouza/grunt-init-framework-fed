@@ -87,9 +87,13 @@ Caso não saiba o nome do plugin desejado, é possível realizar uma busca:
 $ bower search jquery
 ```
 
-Após essa etapa de preparação, é só executar o **grunt** normalmente.
+Após essa etapa de preparação, é só executar o **grunt** normalmente:
 
-**Importante:** este framework assume que o localhost está utilizando a porta 8888 (MAMP). Caso esteja diferente disso, é só procurar a linha abaixo dentro do arquivo Gruntfile.js e fazer a modificação desejada:
+```
+$ grunt
+```
+
+**Importante:** este framework assume que o localhost está utilizando a porta 8888 (MAMP). Caso esteja diferente disso, é só procurar a linha abaixo dentro do arquivo **Gruntfile.js** e fazer a modificação desejada:
 
 ```
 proxy: "localhost:8888"
@@ -101,7 +105,5 @@ Neste caso, entre na pasta do projeto em andamento e digite o seguinte:
 
 ```
 $ npm install
-$ bower init
+$ grunt
 ```
-
-Depois disso é só executar o **grunt** normalmente.
