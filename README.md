@@ -13,9 +13,9 @@
 
 ## Requisitos
 
-Os recursos obrigatórios para que o Framework FED funcione no grunt são os seguintes:
+Os recursos obrigatórios para funcionamento do grunt no Mac são os seguintes:
 
-* Para Mac: [Command Line Tools][commandlinetools]
+* [Command Line Tools][commandlinetools]
 * [Node.Js][nodejs]
 * [grunt-cli][]
 * [grunt-init][]
