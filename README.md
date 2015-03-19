@@ -89,7 +89,7 @@ $ bower search jquery
 
 Após essa etapa de preparação, é só executar o *grunt* normalmente.
 
-#### Importante: este framework assume que o localhost está utilizando a porta 8888 (MAMP). Caso esteja diferente disso, é só procurar a linha abaixo dentro do arquivo Gruntfile.js e fazer a modificação desejada:
+*Importante:* este framework assume que o localhost está utilizando a porta 8888 (MAMP). Caso esteja diferente disso, é só procurar a linha abaixo dentro do arquivo Gruntfile.js e fazer a modificação desejada:
 
 ```
 proxy: "localhost:8888"
