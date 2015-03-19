@@ -13,7 +13,7 @@
 
 ## Requisitos
 
-Os recursos obrigatórios para funcionamento do grunt no Mac são os seguintes:
+Os recursos obrigatórios para funcionamento do grunt e deste template no Mac são os seguintes:
 
 * [Command Line Tools][commandlinetools]
 * [Node.Js][nodejs]
