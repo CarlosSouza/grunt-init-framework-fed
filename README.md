@@ -13,15 +13,15 @@
 
 ## Plugins inclusos
 
-* grunt-contrib-jshint
-* grunt-contrib-watch
-* grunt-contrib-sass
-* grunt-contrib-uglify
-* grunt-contrib-imagemin
-* grunt-autoprefixer
-* grunt-browser-sync
-* grunt-bower-concat
-* grunt-svgstore
+* [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint)
+* [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)
+* [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass)
+* [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
+* [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin)
+* [grunt-autoprefixer](https://github.com/nDmitry/grunt-autoprefixer)
+* [grunt-browser-sync](https://github.com/BrowserSync/grunt-browser-sync)
+* [grunt-bower-concat](https://github.com/sapegin/grunt-bower-concat)
+* [grunt-svgstore](https://github.com/FWeinb/grunt-svgstore)
 
 ## Requisitos
 
