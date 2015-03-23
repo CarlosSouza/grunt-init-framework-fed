@@ -16,11 +16,11 @@
 * grunt-contrib-jshint
 * grunt-contrib-watch
 * grunt-contrib-sass
-* grunt-autoprefixer
+* grunt-contrib-uglify
 * grunt-contrib-imagemin
+* grunt-autoprefixer
 * grunt-browser-sync
 * grunt-bower-concat
-* grunt-contrib-uglify
 * grunt-svgstore
 
 ## Requisitos
