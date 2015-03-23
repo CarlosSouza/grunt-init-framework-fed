@@ -11,7 +11,7 @@
 [browsersync]: http://browsersync.io/
 [bower]: http://bower.io/
 
-## Plugins Grunt inclusos
+## Plugins inclusos
 
 * grunt-contrib-jshint
 * grunt-contrib-watch
