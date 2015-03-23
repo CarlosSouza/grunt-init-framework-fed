@@ -11,6 +11,18 @@
 [browsersync]: http://browsersync.io/
 [bower]: http://bower.io/
 
+## Plugins Grunt inclusos
+
+* grunt-contrib-jshint
+* grunt-contrib-watch
+* grunt-contrib-sass
+* grunt-autoprefixer
+* grunt-contrib-imagemin
+* grunt-browser-sync
+* grunt-bower-concat
+* grunt-contrib-uglify
+* grunt-svgstore
+
 ## Requisitos
 
 Os recursos obrigatórios para funcionamento do grunt e deste template no Mac são os seguintes:
