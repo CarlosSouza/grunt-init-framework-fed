@@ -41,7 +41,7 @@ Veja abaixo os passos a serem executados apenas na primeira vez que for utilizar
 
 ### Instalação
 
-Após a instalação do [Node.Js][nodejs] (via download de pacote no próprio site), você pode executar os seguintes comandos para instalar as outras ferramentas listadas acima:
+Após a instalação do [Node.Js][nodejs] (via download de pacote no próprio site), você pode executar os seguintes comandos para instalar as outras [ferramentas](#requisitos) listadas acima:
 
 ```
 $ npm install -g grunt-cli
@@ -73,7 +73,7 @@ $ grunt-init framework-fed
 
 _Este template sobresceverá os arquivos atuais, por isso se quiser mantê-los, por favor salve-os em outra pasta._
 
-Após a criação do projeto com o template, você pode instalar todos os plugins de forma automática com o comando:
+Após a criação do projeto com o template, você pode instalar todos os [plugins](#plugins-inclusos) de forma automática com o comando:
 
 ```
 $ npm install
