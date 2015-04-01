@@ -70,7 +70,8 @@ module.exports = function(grunt) {
     },
     autoprefixer: {
       options: {
-        browsers: ['last 2 versions', 'ie 8', 'ie 9']
+        browsers: ['last 2 versions', 'ie 8', 'ie 9'],
+        map: true
       },
       multiple_files: {
         expand: true,
@@ -98,7 +99,7 @@ module.exports = function(grunt) {
           xmlns: 'http://www.w3.org/2000/svg'
         }
       },
-      default : {
+      default: {
         files: {
           'imagens/icones.svg': ['imagens/svg/*.svg'],
         },
@@ -131,9 +132,13 @@ module.exports = function(grunt) {
         files: 'imagens/svg/*.svg',
         tasks: ['svgstore']
       },
+      bower_concat: {
+        files: 'bower_components/**/*.js',
+        tasks: ['bower_concat'] 
+      },
       scripts: {
         files: ['js/*'],
-        tasks: ['uglify', 'uglify:bower', 'jshint'],
+        tasks: ['uglify', 'jshint'],
         options: {
           spawn: false,
         },
@@ -173,6 +178,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-svgstore');
 
   // Default task.
-  grunt.registerTask('default', ['bower_concat','browserSync','imagemin','watch']);
+  grunt.registerTask('default', ['browserSync','imagemin','watch']);
 
 };
