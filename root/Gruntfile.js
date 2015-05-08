@@ -1,14 +1,14 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
-  // Project configuration.
+  // Configuração do projeto
   grunt.initConfig({
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     meta: {
       version: '1.0.0'
     },
-    // Task configuration.
+    // Configuração das tasks
     uglify: {
       dist: {
         files: grunt.file.expandMapping(['js/*.js', '!js/*.min.js'], '', {
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'imagens/',
-          src: ['**/*.{png,jpg,gif}'],
+          src: ['imagens/*.{png,jpg,gif}'],
           dest: 'imagens/'
         }]
       }
@@ -119,10 +119,13 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['*.html', 'imagens/*.png', 'imagens/*.jpg', 'js/*.js'],
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
+      },
+      imagemin: {
+        files: ['imagens/*.{png,jpg,gif}'],
+        tasks: ['imagemin']
       },
       css: {
         files: 'scss/*.scss',
@@ -147,10 +150,7 @@ module.exports = function(grunt) {
     browserSync: {
       dev: {
         bsFiles: {
-          src: [
-            "css/*.css",
-            "*.html"
-          ]
+          src: ['css/*.css','*.html','imagens/*.png','imagens/*.jpg']
         },
         options: {
           ghostMode: {
@@ -166,7 +166,7 @@ module.exports = function(grunt) {
     }
   });
 
-  // These plugins provide necessary tasks.
+  // Plugins necessários para executar as tasks
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -177,7 +177,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-svgstore');
 
-  // Default task.
-  grunt.registerTask('default', ['browserSync','imagemin','watch']);
+  // Task padrão
+  grunt.registerTask('default', ['browserSync','watch']);
 
 };
