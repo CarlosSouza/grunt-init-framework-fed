@@ -99,6 +99,13 @@ Caso não saiba o nome do plugin desejado, é possível realizar uma busca:
 $ bower search jquery
 ```
 
+Depois de todos os pacotes instalados no Bower, devemos concatená-los no _bower.js e _bower.css (com excessão do jQuery para evitar problemas com outros scripts):
+
+```
+$ grunt bower_concat
+```
+_A etapa acima deve ser repetida sempre que um (ou vários de uma vez) novo plugin for instalado!
+
 Após essa etapa de preparação, é só executar o **grunt** normalmente:
 
 ```
