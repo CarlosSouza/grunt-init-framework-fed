@@ -104,7 +104,7 @@ Depois de todos os pacotes instalados no Bower, devemos concatená-los no _bower
 ```
 $ grunt bower_concat
 ```
-_A etapa acima deve ser repetida sempre que um (ou vários de uma vez) novo plugin for instalado!_
+_A etapa acima deve ser repetida sempre que um novo plugin (ou vários de uma vez) for instalado!_
 
 Após essa etapa de preparação, é só executar o **grunt** normalmente:
 
