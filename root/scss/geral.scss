@@ -30,7 +30,9 @@
   @import "reset";
 
   html { font: 100% Arial, Helvetica, sans-serif; color: $cor_textos; }
-  body { background-color: $cor_body; @include font-size(14px); }
+  body { background-color: $cor_body; @include font-size(14px);
+    &:after { content: 'geral'; display: none; }
+  }
   
   /* responsive media */
   img, object, embed { max-width: 100%; height: auto; }
