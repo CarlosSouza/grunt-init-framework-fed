@@ -18,7 +18,7 @@
 * [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass)
 * [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
 * [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin)
-* [grunt-autoprefixer](https://github.com/nDmitry/grunt-autoprefixer)
+* [grunt-postcss](https://github.com/nDmitry/grunt-postcss)
 * [grunt-browser-sync](https://github.com/BrowserSync/grunt-browser-sync)
 * [grunt-bower-concat](https://github.com/sapegin/grunt-bower-concat)
 * [grunt-svgstore](https://github.com/FWeinb/grunt-svgstore)
