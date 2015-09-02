@@ -68,10 +68,10 @@ module.exports = function(grunt) {
         }
       }
     },
-    autoprefixer: {
+    postcss: {
       options: {
-        browsers: ['last 2 versions', 'ie 8', 'ie 9'],
-        map: true
+        map: true,
+        browsers: ['last 2 versions']
       },
       multiple_files: {
         expand: true,
@@ -129,7 +129,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: 'scss/*.scss',
-        tasks: ['sass', 'autoprefixer']
+        tasks: ['sass', 'postcss']
       },
       svgstore: {
         files: 'imagens/svg/*.svg',
@@ -137,7 +137,7 @@ module.exports = function(grunt) {
       },
       bower_concat: {
         files: 'bower_components/**/*.js',
-        tasks: ['bower_concat'] 
+        tasks: ['bower_concat']
       },
       scripts: {
         files: ['js/*'],
@@ -174,7 +174,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-bower-concat');
-  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-svgstore');
 
   // Task padrão

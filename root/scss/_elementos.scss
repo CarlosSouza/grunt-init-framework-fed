@@ -32,7 +32,7 @@ $cor_body: #fff; // cor do fundo do site
     @mixin rpl($width, $height, $image: null, $display: null, $color: null, $position: null, $repeat: null, $size: null) {
       width: $width;
       height: $height;
-      @if $image != null { background-image: image-url('#{$image}'); }
+      @if $image != null { background-image: url('#{$image}'); }
       @if $color != null { background-color: $color; }
       @if $position != null { background-position: $position; }
       @if $repeat != null { background-repeat: $repeat; }

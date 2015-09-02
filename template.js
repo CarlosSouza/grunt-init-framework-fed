@@ -14,7 +14,7 @@ exports.warnOn = 'Gruntfile.js';
 exports.template = function(grunt, init, done) {
 
   init.process({}, [], function(err, props) {
-    
+
     // Find the first `preferred` item existing in `arr`.
     function prefer(arr, preferred) {
       for (var i = 0; i < preferred.length; i++) {
@@ -46,7 +46,7 @@ exports.template = function(grunt, init, done) {
       'grunt-contrib-jshint': '~0.10.0',
       'grunt-contrib-watch': '~0.6.1',
       'grunt-contrib-sass': '~0.9.2',
-      'grunt-autoprefixer': '~2.2.0',
+      "grunt-postcss": "~0.6.0",
       'grunt-contrib-imagemin': '~0.8.1',
       'grunt-browser-sync': '~1.5.2',
       'grunt-bower-concat': '~0.4.0',
