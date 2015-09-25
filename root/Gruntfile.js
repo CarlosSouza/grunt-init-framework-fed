@@ -45,7 +45,7 @@ module.exports = function(grunt) {
         boss: true,
         eqnull: true,
         browser: true,
-        ignores: ['js/_bower.js', 'js/_bower.min.js', 'js/plugins.js', 'js/plugins.min.js'],
+        ignores: ['bower_components/**/*.js', 'js/_bower.js', 'js/_bower.min.js', 'js/plugins.js', 'js/plugins.min.js'],
         globals: {
           jQuery: true
         }
@@ -71,7 +71,10 @@ module.exports = function(grunt) {
     postcss: {
       options: {
         map: true,
-        browsers: ['last 2 versions']
+        processors: [
+          require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+          require('pixrem')(), // add fallbacks for rem units
+        ]
       },
       multiple_files: {
         expand: true,
@@ -111,7 +114,12 @@ module.exports = function(grunt) {
         cssDest: 'css/_bower.css',
         exclude: [
           'jquery',
-          'modernizr'
+          'modernizr',
+          'bootstrap',
+          'angular',
+          'angular-bootstrap',
+          'angular-i18n',
+          'd3'
         ],
         bowerOptions: {
           relative: false
@@ -150,7 +158,7 @@ module.exports = function(grunt) {
     browserSync: {
       dev: {
         bsFiles: {
-          src: ['css/*.css','*.html','imagens/*.png','imagens/*.jpg']
+          src: ['css/*.css','*.html']
         },
         options: {
           ghostMode: {
