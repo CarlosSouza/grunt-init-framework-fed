@@ -20,16 +20,7 @@ module.exports = function(grunt) {
           sourceMap: true,
           banner: '/*! <%= grunt.template.today("yyyy-mm-dd") %> */'
         },
-      },
-      bower: {
-        options: {
-          mangle: true,
-          compress: true
-        },
-        files: {
-          'js/_bower.min.js': 'js/_bower.js'
-        }
-      },
+      }
     },
     jshint: {
       options: {
@@ -76,11 +67,8 @@ module.exports = function(grunt) {
           require('pixrem')(), // add fallbacks for rem units
         ]
       },
-      multiple_files: {
-        expand: true,
-        flatten: true,
+      dist: {
         src: 'css/*.css',
-        dest: 'css/'
       },
     },
     imagemin: {
@@ -149,10 +137,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: ['js/*'],
-        tasks: ['uglify', 'jshint'],
-        options: {
-          spawn: false,
-        },
+        tasks: ['uglify', 'jshint']
       }
     },
     browserSync: {
