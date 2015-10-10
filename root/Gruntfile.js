@@ -36,13 +36,10 @@ module.exports = function(grunt) {
         boss: true,
         eqnull: true,
         browser: true,
-        ignores: ['bower_components/**/*.js', 'js/_bower.js', 'js/_bower.min.js', 'js/plugins.js', 'js/plugins.min.js'],
+        ignores: ['js/_bower.js', 'js/_bower.min.js', 'js/plugins.js', 'js/plugins.min.js'],
         globals: {
           jQuery: true
         }
-      },
-      gruntfile: {
-        src: 'Gruntfile.js'
       }
     },
     sass: {
@@ -115,10 +112,6 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
-      },
       imagemin: {
         files: ['imagens/*.{png,jpg,gif}'],
         tasks: ['imagemin']
@@ -143,7 +136,7 @@ module.exports = function(grunt) {
     browserSync: {
       dev: {
         bsFiles: {
-          src: ['css/*.css','*.html']
+          src: ['css/*.css','*.html','imagens/*.{png,jpg,gif}']
         },
         options: {
           ghostMode: {
