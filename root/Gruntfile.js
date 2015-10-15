@@ -69,7 +69,7 @@ module.exports = function(grunt) {
         ]
       },
       dist: {
-        src: 'css/*.css',
+        src: ['css/geral.css','css/impressao.css']
       },
     },
     imagemin: {
