@@ -13,6 +13,7 @@
 
 ## Plugins inclusos
 
+* [jit-grunt](https://github.com/shootaroo/jit-grunt)
 * [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint)
 * [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)
 * [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass)
@@ -55,11 +56,13 @@ _Pode ser que seja necessário inserir "sudo" (sem as aspas) no início de cada 
 
 ### Cópia do template base em sua máguina
 
-Depois da instalação dos recursos básicos, coloque o grunt-framework-fed na pasta `~/.grunt-init/`. Podemos fazer isso através do git:
+Depois da instalação dos recursos básicos, você pode criar uma pasta chamada '.grunt-init' dentro da pasta do seu usuário no Mac. Depois disso feito, copiamos este repositório git que servirá como template para seus futuros projetos:
 
 ```
-$ git clone https://github.com/CarlosSouza/grunt-init-framework-fed.git ~/.grunt-init/framework-fed
+$ git clone https://github.com/CarlosSouza/grunt-init-framework-fed.git /Users/nome-do-usuario/.grunt-init/framework-fed
 ```
+
+_Importante: trocar "nome-do-usuario" pelo nome da pasta do seu usuário no Mac._
 
 _(Usuários de Windows, vejam [a documentação][grunt-init] para o caminho correto)_
 

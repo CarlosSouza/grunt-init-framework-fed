@@ -42,18 +42,18 @@ exports.template = function(grunt, init, done) {
 
     // If is package_json true, generate package.json
     var devDependencies = {
-      "grunt": "~0.4.5",
-      "grunt-bower-concat": "~0.4.0",
-      "grunt-browser-sync": "~1.5.2",
-      "grunt-contrib-imagemin": "~0.8.1",
-      "grunt-contrib-jshint": "~0.10.0",
-      "grunt-contrib-sass": "~0.9.2",
-      "grunt-contrib-uglify": "~0.6.0",
-      "grunt-contrib-watch": "~0.6.1",
-      "grunt-postcss": "~0.6.0",
+      "grunt": "~1.0.0",
+      "jit-grunt": "~0.10.0",
+      "grunt-bower-concat": "~1.0.0",
+      "grunt-browser-sync": "~2.2.0",
+      "grunt-contrib-imagemin": "~1.0.1",
+      "grunt-contrib-jshint": "~1.0.0",
+      "grunt-contrib-sass": "~1.0.0",
+      "grunt-contrib-uglify": "~1.0.1",
+      "grunt-contrib-watch": "~1.0.0",
+      "grunt-postcss": "~0.8.0",
       "autoprefixer": "~6.0.3",
-      "pixrem": "~3.0.0",
-      "grunt-svgstore": "~0.5.0"
+      "grunt-svgstore": "~1.0.0"
     };
 
     // Generate package.json file, used by npm and grunt.

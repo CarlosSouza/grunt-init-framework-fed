@@ -1,6 +1,9 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+  // carregando os plugins "just in time"
+  require('jit-grunt')(grunt);
+
   // Configuração do projeto
   grunt.initConfig({
     // Metadata.
@@ -64,8 +67,7 @@ module.exports = function(grunt) {
       options: {
         map: true,
         processors: [
-          require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
-          require('pixrem')(), // add fallbacks for rem units
+          require('autoprefixer')({browsers: 'last 2 versions'}) // add vendor prefixes
         ]
       },
       dist: {
@@ -157,19 +159,8 @@ module.exports = function(grunt) {
           proxy: "localhost:8888"
         }
       }
-    }
+    },
   });
-
-  // Plugins necessários para executar as tasks
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-bower-concat');
-  grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('grunt-svgstore');
 
   // Task padrão
   grunt.registerTask('default', ['browserSync','watch']);
