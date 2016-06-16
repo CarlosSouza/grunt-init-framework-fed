@@ -62,7 +62,7 @@ Depois da instalação dos recursos básicos, você pode criar uma pasta chamada
 $ git clone https://github.com/CarlosSouza/grunt-init-framework-fed.git /Users/nome-do-usuario/.grunt-init/framework-fed
 ```
 
-_Importante: trocar "nome-do-usuario" pelo nome da pasta do seu usuário no Mac._
+**Importante:** trocar "nome-do-usuario" pelo nome da pasta do seu usuário no Mac.
 
 _(Usuários de Windows, vejam [a documentação][grunt-init] para o caminho correto)_
 
@@ -76,7 +76,7 @@ $ grunt-init framework-fed
 
 _Este template sobresceverá os arquivos atuais, por isso se quiser mantê-los, por favor salve-os em outra pasta._
 
-Após a criação do projeto com o template, você pode instalar todos os [plugins](#plugins-inclusos) de forma automática com o comando:
+Com a criação do projeto, baseado em nosso template, você pode instalar todos os [plugins](#plugins-inclusos) de forma automática com o comando:
 
 ```
 $ npm install
@@ -127,5 +127,6 @@ Neste caso, entre na pasta do projeto existente e digite o seguinte:
 
 ```
 $ npm install
+$ bower install
 $ grunt
 ```
